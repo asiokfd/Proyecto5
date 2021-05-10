@@ -10,7 +10,7 @@ def resultados_gridDT (gsr):
     gsresults = pd.DataFrame(gsr.cv_results_)
     gsresults = gsresults[['param_max_depth', 'param_max_features', 'param_min_samples_split',
        'mean_test_score', 'mean_train_score']]
-    display (gsresults.sort_values("mean_test_score", ascending=False).head())
+    display (gsresults.sort_values("mean_test_score", ascending=False).head(10))
     
 
 def resultados_gridGBR (gsname):
